@@ -1,5 +1,7 @@
 # Refactoring Exercise: From Monolith to Modules
 
+![Code Quality](https://github.com/hs-aalen-software-engineering/sose-2026-ci-cd-SilberkCode/actions/workflows/quality.yml/badge.svg)
+
 > **[DE] Deutsche Version:** Für vollständige Anweisungen auf Deutsch, siehe [README.de.md](README.de.md)
 > **[EN] English Version:** You are reading it!
 
@@ -241,15 +243,7 @@ uv run pyright
 git push -u origin feature/refactor-to-modules
 
 # Create PR using GitHub CLI (recommended)
-gh pr create --title "Refactor: Split monolith into focused modules" \
-  --body "Refactored src/road_profile_viewer/main.py into modular structure:
-
-- geometry.py: Ray intersection math
-- road.py: Road generation
-- visualization.py: Dash UI
-- main.py: Entry point (~20 lines)
-
-All code quality checks pass.
+y checks pass.
 Ready for review!"
 
 # Or create PR manually on GitHub web interface
@@ -281,7 +275,15 @@ Ready for review!"
 ### Step 9: Wait for CI Checks
 
 **GitHub Actions will automatically run:**
+gh pr create --title "Refactor: Split monolith into focused modules" \
+  --body "Refactored src/road_profile_viewer/main.py into modular structure:
 
+- geometry.py: Ray intersection math
+- road.py: Road generation
+- visualization.py: Dash UI
+- main.py: Entry point (~20 lines)
+
+All code qualit
 - ✅ Structure Check (verifies files exist, imports correct, etc.)
 - ✅ Git Workflow Check (verifies feature branch, incremental commits)
 - ✅ Code Quality Check (Ruff, Pyright)
